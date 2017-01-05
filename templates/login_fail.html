@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+
+<div class="container bg_image">
+<div id="login-overlay" class="modal-dialog">
+    <form action="/submit_login" method="POST">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="myModalLabel">Wrong username or password, please try again!</h4>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-xs-6">
+                      <div class="well">
+                          <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+                              <div class="form-group">
+                                  <label for="username" class="control-label">Username</label>
+                                  <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="Your user name here">
+                                  <span class="help-block"></span>
+                              </div>
+                              <div class="form-group">
+                                  <label for="password" class="control-label">Password</label>
+                                  <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password" placeholder="Your password here">
+                                  <span class="help-block"></span>
+                              </div>
+                              <div id="loginErrorMsg" class="alert alert-error hide">Wrong username og password</div>
+                              <div class="checkbox">
+                                  <label>
+                                      <input type="checkbox" name="remember" id="remember"> Remember login
+                                  </label>
+                                  <p class="help-block">(if this is a private computer)</p>
+                              </div>
+                              <button type="submit" class="btn btn-success btn-block">Login</button>
+                          </form>
+                      </div>
+                  </div>
+                  <div class="col-xs-6">
+                      <p class="lead">Register now for <span class="text-success">FREE</span></p>
+                      <ul class="list-unstyled" style="line-height: 2">
+                          <li><span class="fa fa-check text-success"></span> Get to be my friend</li>
+                          <li><span class="fa fa-check text-success"></span> Be spammed all day long</li>
+                          <li><span class="fa fa-check text-success"></span> Enjoy my daily musings</li>
+                          <li><span class="fa fa-check text-success"></span> Daily GitHub commits and RANTS!</li>
+                      </ul>
+                      <p><a href="/new_user" class="btn btn-info btn-block">Yes please, register now!</a></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </form>
+  </div>
+  </div>
+
+
+<!-- <h2>Incorrect username or password, please try again!</h2>
+<form action="/submit_login" method="POST">
+  <p>
+    <label for="username">User Name</label><br>
+    <input type="text" size="45" name="username">
+  </p>
+  <p>
+    <label for="password">Password</label><br>
+    <input type="text" size="45" name="password">
+  </p>
+  <p>
+    <button type="submit">Submit</button>
+  </p>
+
+ <h3>Click <a href='/new_user'>HERE</a> to Create Login</h3>
+</form> -->
+{% endblock %}

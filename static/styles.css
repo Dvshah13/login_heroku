@@ -1,0 +1,33 @@
+.bg_image {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url('http://ohtoptens.com/wp-content/uploads/2016/11/desktop-background-romania-park-carol-wallpaper-picture-mypicture.jpg');
+    background-repeat:repeat;
+  }
+
+.fullscreen_bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url('http://ohtoptens.com/wp-content/uploads/2016/11/desktop-background-romania-park-carol-wallpaper-picture-mypicture.jpg');
+    background-repeat:repeat;
+  }
+
+.bg_overlay {
+      background-image: url('http://ohtoptens.com/wp-content/uploads/2015/05/HD-Background-Wallpapers-45.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      color: #fff;
+      height: 450px;
+      padding-top: 50px;
+ }
