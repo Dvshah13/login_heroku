@@ -27,7 +27,7 @@ DBNAME=os.environ.get('DBNAME', True)
 ###
 # Routing for your application.
 ###
-db=pg.DB(host=DBHOST, user=DBUSER, passwd=DBPASS, dbname=DBNAME)
+
 
 @app.route('/')
 def login():
@@ -44,6 +44,7 @@ def new_user():
 
 @app.route('/new_user_submit', methods=['GET', 'POST'])
 def new_user_submit():
+    db=pg.DB(host=DBHOST, user=DBUSER, passwd=DBPASS, dbname=DBNAME)
     username=request.form.get('username')
     password=request.form.get('password')
     password1=request.form.get('password1')
@@ -69,3 +70,6 @@ def submit_login():
             return redirect('/')
     else:
         return render_template("login_fail.html")
+
+if __name__ == '__main__':
+    app.run(debug=True)
